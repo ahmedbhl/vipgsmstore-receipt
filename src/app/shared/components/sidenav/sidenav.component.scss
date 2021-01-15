@@ -1,0 +1,26 @@
+.nav-item :hover {
+  border-left: 4px solid #f44336;
+  // rgb(230, 230, 230);
+  opacity: 0.9;
+}
+
+.nav-link {
+  font-size: 1em;
+  font-style: inherit;
+  padding: 0 1rem;
+  display: block;
+  line-height: 2.5rem;
+  text-decoration: inherit;
+  color: black;
+
+  i {
+    vertical-align: sub;
+  }
+}
+
+a.active {
+  border-left: 4px solid #f44336;
+}
+.nav {
+  padding: 1rem 0;
+}

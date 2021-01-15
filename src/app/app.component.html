@@ -1,0 +1,15 @@
+<mat-sidenav-container *ngIf="currentUser">
+	<app-toolbar (navbarEventEmitter)="sidenav.toggle()"></app-toolbar>
+
+	<mat-sidenav #sidenav mode="side">
+		<app-sidenav></app-sidenav>
+	</mat-sidenav>
+
+	<router-outlet></router-outlet>
+	<app-print-page class="printable"></app-print-page>
+</mat-sidenav-container>
+
+
+<mat-sidenav-container *ngIf="!currentUser">
+	<router-outlet></router-outlet>
+</mat-sidenav-container>

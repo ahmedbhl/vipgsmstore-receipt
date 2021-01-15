@@ -1,0 +1,47 @@
+button {
+  outline: 0;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  position: fixed;
+  min-height: 64px !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 5px black;
+}
+
+.mat-toolbar-row {
+  height: 64px !important;
+}
+
+.brand {
+  display: flex;
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-decoration: inherit;
+  color: currentColor;
+  margin-left: 1rem;
+
+  .logo {
+    background: #f44336;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    color: white;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      background-position: right center;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

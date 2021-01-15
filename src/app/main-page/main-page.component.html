@@ -1,0 +1,70 @@
+<!-- Container -->
+<div class="container">
+
+	<h1 class="form-row">
+		<span class="covid-title col-md-2 mb-3">xxxx</span>
+		<span class="covid-subtitle col-md-10 mb-3">xxxx</span>
+	</h1>
+
+	<div class="form-row">
+		<p class="justify-content"> xxxxx </p>
+	</div>
+
+
+	<form (ngSubmit)="onSubmit()" [formGroup]="form" class="needs-validation" novalidate>
+
+		<h4> xxx :</h4>
+		<span>xxxx</span>
+
+		<div class="form-row">
+			<div class="col-md-6 mb-3">
+				<label>xxxx</label>
+				<input type="text" class="form-control" formControlName="firstName"
+					placeholder="xxxx" required
+					[class.is-invalid]="submitted && formControls.firstName.errors">
+				<div class="invalid-feedback" *ngIf="submitted && formControls.firstName.errors">
+					xxxx
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-12 mb-3">
+					<label>xxx</label>
+					<input type="text" class="form-control" formControlName="birthplace"
+					placeholder="xx" required
+					[class.is-invalid]="submitted && formControls.birthplace.errors">
+					<div class="invalid-feedback" *ngIf="submitted && formControls.birthplace.errors">
+						xxx
+					</div>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<legend>ngx-flag-picker </legend>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 mb-3">
+					<label>xxx</label>
+					<input type="date" class="form-control" formControlName="exitDate" name="datesortie" autocomplete="off"
+					placeholder="JJ/MM/YYYY" aria-invalid="true" required
+					[class.is-invalid]="submitted && formControls.exitDate.errors">
+					<div class="invalid-feedback" *ngIf="submitted && formControls.exitDate.errors">
+						xxxx
+					</div>
+				</div>
+
+				<div class="col-md-6 mb-3">
+					<label>xxx</label>
+					<input type="time" class="form-control" formControlName="exitTime" name="heure" autocomplete="off"
+					aria-invalid="true" required [class.is-invalid]="submitted && formControls.exitTime.errors">
+					<div class="invalid-feedback" *ngIf="submitted && formControls.exitTime.errors">
+						xxx
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-primary" type="submit">xxx</button>
+	</form>
+</div>
+<!-- Container -->

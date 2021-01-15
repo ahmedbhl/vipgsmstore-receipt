@@ -1,0 +1,10 @@
+mat-sidenav {
+  width: 13rem;
+  background-color: #fafafa;
+  box-shadow: 0 0 1px black;
+  border-right: solid 1px rgba(161, 161, 161, 0.158);
+}
+
+.mat-drawer.mat-drawer-side {
+  z-index: 1;
+}
