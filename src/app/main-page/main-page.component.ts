@@ -4,11 +4,9 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 @Component({
   selector: "app-main-page",
   templateUrl: "./main-page.component.html",
-  styleUrls: ["./main-page.component.css"]
+  styleUrls: ["./main-page.component.scss"]
 })
 export class MainPageComponent implements OnInit {
-  public reasons: string[];
-
   public selectedCountryCode;
 
   public form: FormGroup;
@@ -36,7 +34,7 @@ export class MainPageComponent implements OnInit {
       address: ["", Validators.required],
       city: ["", Validators.required],
       zip: ["", Validators.required],
-      reasonList: this._formBuilder.array(this.reasons.map(item => !item)),
+      reasonList: this._formBuilder.array([]),
       exitDate: [
         new Date().toISOString().substring(0, 10),
         Validators.required

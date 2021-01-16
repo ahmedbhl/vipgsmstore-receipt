@@ -1,70 +1,164 @@
 <!-- Container -->
 <div class="container">
+  <h1 class="form-row">
+    <span class="covid-subtitle col-md-10 mb-3">Fiche de Reception </span>
+  </h1>
 
-	<h1 class="form-row">
-		<span class="covid-title col-md-2 mb-3">xxxx</span>
-		<span class="covid-subtitle col-md-10 mb-3">xxxx</span>
-	</h1>
+  <form
+    (ngSubmit)="onSubmit()"
+    [formGroup]="form"
+    class="needs-validation"
+    novalidate
+  >
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label>Date</label>
+        <input
+          type="date"
+          class="form-control"
+          formControlName="exitDate"
+          name="datesortie"
+          autocomplete="off"
+          placeholder="JJ/MM/YYYY"
+          aria-invalid="true"
+          required
+          [class.is-invalid]="submitted && formControls.exitDate.errors"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="submitted && formControls.exitDate.errors"
+        >
+          Date
+        </div>
+      </div>
 
-	<div class="form-row">
-		<p class="justify-content"> xxxxx </p>
-	</div>
+      <div class="col-md-6 mb-3">
+        <label>Nom</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="firstName"
+          placeholder="Nom"
+          required
+          [class.is-invalid]="submitted && formControls.firstName.errors"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="submitted && formControls.firstName.errors"
+        >
+          Le nom est obligatoire
+        </div>
+      </div>
 
+      <div class="col-md-6 mb-3">
+        <label>Prénom</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="firstName"
+          placeholder="Prénom"
+          required
+          [class.is-invalid]="submitted && formControls.firstName.errors"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="submitted && formControls.firstName.errors"
+        >
+          Le Prénom est obligatoire
+        </div>
+      </div>
 
-	<form (ngSubmit)="onSubmit()" [formGroup]="form" class="needs-validation" novalidate>
+      <div class="col-md-6 mb-3">
+        <label>Numéro de téléphone</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="firstName"
+          placeholder="Numéro de téléphone"
+          required
+          [class.is-invalid]="submitted && formControls.firstName.errors"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="submitted && formControls.firstName.errors"
+        >
+          Le Numéro de téléphone est obligatoire
+        </div>
+      </div>
 
-		<h4> xxx :</h4>
-		<span>xxxx</span>
+      <div class="col-md-6 mb-3">
+        <label>Modéle</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="firstName"
+          placeholder="Modéle"
+          required
+          [class.is-invalid]="submitted && formControls.firstName.errors"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="submitted && formControls.firstName.errors"
+        >
+          Le Modéle de téléphone est obligatoire
+        </div>
+      </div>
 
-		<div class="form-row">
-			<div class="col-md-6 mb-3">
-				<label>xxxx</label>
-				<input type="text" class="form-control" formControlName="firstName"
-					placeholder="xxxx" required
-					[class.is-invalid]="submitted && formControls.firstName.errors">
-				<div class="invalid-feedback" *ngIf="submitted && formControls.firstName.errors">
-					xxxx
-				</div>
-			</div>
+      <div class="col-md-6 mb-3">
+        <label>Panne</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="firstName"
+          placeholder="Panne"
+          required
+          [class.is-invalid]="submitted && formControls.firstName.errors"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="submitted && formControls.firstName.errors"
+        >
+          Le Panne de téléphone est obligatoire
+        </div>
+      </div>
 
-			<div class="form-row">
-				<div class="col-md-12 mb-3">
-					<label>xxx</label>
-					<input type="text" class="form-control" formControlName="birthplace"
-					placeholder="xx" required
-					[class.is-invalid]="submitted && formControls.birthplace.errors">
-					<div class="invalid-feedback" *ngIf="submitted && formControls.birthplace.errors">
-						xxx
-					</div>
-				</div>
-			</div>
+      <div class="col-md-6 mb-3">
+        <label>Montant à payer</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="firstName"
+          placeholder="Montant à payer"
+          required
+          [class.is-invalid]="submitted && formControls.firstName.errors"
+        />
+      </div>
 
-			<div class="form-row">
-				<legend>ngx-flag-picker </legend>
-			</div>
+      <div class="col-md-6 mb-3">
+        <label>Montant payé</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="firstName"
+          placeholder="Montant payé"
+          required
+          [class.is-invalid]="submitted && formControls.firstName.errors"
+        />
+      </div>
 
-			<div class="form-row">
-				<div class="col-md-6 mb-3">
-					<label>xxx</label>
-					<input type="date" class="form-control" formControlName="exitDate" name="datesortie" autocomplete="off"
-					placeholder="JJ/MM/YYYY" aria-invalid="true" required
-					[class.is-invalid]="submitted && formControls.exitDate.errors">
-					<div class="invalid-feedback" *ngIf="submitted && formControls.exitDate.errors">
-						xxxx
-					</div>
-				</div>
-
-				<div class="col-md-6 mb-3">
-					<label>xxx</label>
-					<input type="time" class="form-control" formControlName="exitTime" name="heure" autocomplete="off"
-					aria-invalid="true" required [class.is-invalid]="submitted && formControls.exitTime.errors">
-					<div class="invalid-feedback" *ngIf="submitted && formControls.exitTime.errors">
-						xxx
-					</div>
-				</div>
-			</div>
-		</div>
-		<button class="btn btn-primary" type="submit">xxx</button>
-	</form>
+      <div class="form-group textarea">
+        <label for="exampleFormControlTextarea1">Autre Remarque</label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          cols="50"
+        ></textarea>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="printPage()">
+      Sauvegarder
+    </button>
+  </form>
 </div>
 <!-- Container -->
