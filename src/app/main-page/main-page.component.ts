@@ -19,7 +19,6 @@ export class MainPageComponent implements OnInit {
     this._initFormGroupe();
   }
   ngOnInit(): void {
-    throw new Error("Method not implemented.");
   }
 
   /**
